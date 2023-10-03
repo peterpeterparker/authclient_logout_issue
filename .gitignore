@@ -1,0 +1,34 @@
+# Various IDEs and Editors
+.vscode/
+.idea/
+**/*~
+
+# Mac OSX temporary files
+.DS_Store
+**/.DS_Store
+
+node_modules
+/build
+/.svelte-kit
+/package
+!.env.example
+.dfx
+target
+internet_identity.wasm
+internet_identity.wasm.gz
+/internet_identity.did
+ledger.did
+ledger.private.did
+ledger.public.did
+ledger.wasm
+ledger.wasm.gz
+index.wasm
+index.wasm.gz
+index.did
+cmc.wasm
+cmc.wasm.gz
+console.wasm
+mission_control.wasm
+observatory.wasm
+satellite.wasm
+out/

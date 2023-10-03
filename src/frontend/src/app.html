@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- CONTENT_SECURITY_POLICY -->
+
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+		<title>Juno | Console</title>
+		<link href="https://console.juno.build" rel="canonical" />
+		<meta
+			content="Build Web3 dApps like Web2. No backend code required. 100% on-chain with minimal carbon impact."
+			name="description"
+		/>
+		<meta content="Juno" property="og:title" />
+		<meta content="Build Web3 dApps like Web2." property="og:description" />
+		<meta content="website" property="og:type" />
+		<meta content="https://console.juno.build" property="og:url" />
+		<meta content="https://console.juno.build/images/social_image_v5.jpg" property="og:image" />
+		<meta content="summary_large_image" name="twitter:card" />
+		<meta content="Juno" name="twitter:title" />
+		<meta content="Build Web3 dApps like Web2." name="twitter:description" />
+		<meta content="https://console.juno.build/images/social_image_v5.jpg" name="twitter:image" />
+		<meta content="@JunoBuild" name="twitter:creator" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+		<link href="/icons/icon-48x48.png" rel="apple-touch-icon" sizes="48x48" />
+		<link href="/icons/icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+		<link href="/icons/icon-96x96.png" rel="apple-touch-icon" sizes="96x96" />
+		<link href="/icons/icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+		<link href="/icons/icon-192x192.png" rel="apple-touch-icon" sizes="192x192" />
+		<link href="/icons/icon-256x256.png" rel="apple-touch-icon" sizes="256x256" />
+		<link href="/icons/icon-384x384.png" rel="apple-touch-icon" sizes="384x384" />
+		<link href="/icons/icon-512x512.png" rel="apple-touch-icon" sizes="512x512" />
+
+		<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#7888ff" />
+		<meta name="msapplication-TileColor" content="#7888ff" />
+		<meta name="msapplication-config" content="/icons/browserconfig.xml" />
+
+		<link crossorigin="anonymous" href="/manifest.webmanifest" rel="manifest" />
+		<meta content="#7888ff" name="theme-color" />
+
+		<!-- LINKS_PRELOADER -->
+
+		%sveltekit.head%
+
+		<!-- Init theme as fast as possible -->
+		<script theme-loader>
+			try {
+				const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+				document.documentElement.setAttribute(
+					'theme',
+					localStorage.theme ?? (darkMode ? 'dark' : 'light')
+				);
+			} catch (err) {
+				// We ignore the error until we can extra proxy/signin to auth.papy.rs
+			}
+		</script>
+	</head>
+	<body>
+		<div>%sveltekit.body%</div>
+
+		<!-- SCRIPT_LOADER -->
+	</body>
+</html>
